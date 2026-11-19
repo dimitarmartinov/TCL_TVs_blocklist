@@ -1,8 +1,10 @@
 ! This is Initial testing. More domains will be added as additional DNS query logs are collected from the TV.
-! It is currently being tested on a TCL C8L model and its purpose is to block as many ads, telemetry, and tracking domains as possible while keeping Google Assistant and system updates functional.
+! It is currently being tested on a TCL C8L model. Its purpose is to block as many ads, telemetry, and tracking domains as possible while keeping Google Assistant and system updates functional.
+! The blocklist also includes additional domains related to Google Assistant and system updates, which are commented out by default. You can uncomment them if you want to try a more aggressive blocking approach, but be aware that doing so may break some functionalities.
 ! As always, use with caution and please report any issues you encounter!
 ! Last update: 19.11.2026
 !
+! TCL specific
 ||on-hweudc-o.api.leiniao.com^
 ||on-hwtcs-o.api.leiniao.com^
 ||hwmsg-as5-o.api.leiniao.com^
@@ -12,3 +14,26 @@
 ||eu-newuser-tcl.cedock.com^
 ||embeddedassistant.googleapis.com^
 ||speechs3proto2-pa.googleapis.com^
+!
+! To be included in the next round of testing, as these entries are more aggressive and may break certain functionalities.
+! ||on-hwlauncher-o.api.leiniao.com
+! ||on-hwlauncher-apps-o.api.leiniao.com
+! ||hwlauncher-apps-o.api.leiniao.com
+! ||hwsearch-o.api.leiniao.com
+! ||on-hwuc-conf-o.api.leiniao.com
+!
+! Google Assistant
+! ||embeddedassistant.googleapis.com^
+! ||speechs3proto2-pa.googleapis.com^
+!
+! Google TV specific (PlayStore, updates and main GoogleTV functinality)
+! connectivitycheck.gstatic.com
+! clients3.google.com
+! android.googleapis.com
+! play.googleapis.com
+! www.googleapis.com
+! dl.google.com
+! time.android.com
+! time.google.com
+! on-hw-tdp-o.api.leiniao.com
+! on-hwupgrade-o.api.leiniao.com
